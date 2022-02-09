@@ -60,7 +60,8 @@ def sendEmails(templateFile, variables):
     # Initialise mail server
     emailSender = environ['EMAIL_SENDER']
     emailPassword = environ['EMAIL_PASSWORD']
-    mailserver = smtplib.SMTP('smtp.office365.com', 587)
+    emailServer = environ.get('EMAIL_SERVER','smtp.office365.com')
+    mailserver = smtplib.SMTP(emailServer, 587)
     mailserver.ehlo()
     mailserver.starttls()
     mailserver.login(emailSender, emailPassword)
