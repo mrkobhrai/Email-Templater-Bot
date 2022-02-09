@@ -112,3 +112,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Ignored files & folders
+.idea
+__pycache__
+data/*
+templates/*
+.env
