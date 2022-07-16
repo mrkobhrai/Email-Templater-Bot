@@ -116,6 +116,4 @@ dmypy.json
 # Ignored files & folders
 .idea
 __pycache__
-data/*
-templates/*
 .env
